@@ -17,8 +17,8 @@ async def start_message(bot, message):
         photo=random.choice(PICS),
         caption=txt.STAT.format(message.from_user.mention),
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("🍁 ꜱᴜᴩᴩᴏʀᴛ", url="https://t.me/BETA_SUPPORT"),
-            InlineKeyboardButton("📯 ᴜᴩᴅᴀᴛᴇꜱ", url="https://t.me/Beta_BoTZ")
+            InlineKeyboardButton("🍁 ꜱᴜᴩᴩᴏʀᴛ", url="https://t.me/tiyaan_bots_chat"),
+            InlineKeyboardButton("📯 ᴜᴩᴅᴀᴛᴇꜱ", url="https://t.me/Tiyaan_bots")
             ],[            
             InlineKeyboardButton("ℹ️ ʜᴇʟᴩ", callback_data="help"),
             InlineKeyboardButton("📡 ᴀʙᴏᴜᴛ", callback_data="about")
@@ -59,8 +59,8 @@ async def media_info(bot, m):
                                         
     if not md:
         buttons = [[
-            InlineKeyboardButton("✨️ Support", url="https://t.me/BETA_SUPPORT"),
-            InlineKeyboardButton("📢 Updates", url="https://t.me/Beta_BoTZ")
+            InlineKeyboardButton("✨️ Support", url="https://t.me/tiyaan_bots_chat"),
+            InlineKeyboardButton("📢 Updates", url="https://t.me/Tiyaan_bots")
         ]]       
         await m.reply("please wait....")
         await asyncio.sleep(3)
@@ -84,15 +84,6 @@ async def media_info(bot, m):
                disable_notification=True
            )
 
-@Client.on_message(filters.command("repo"))
-async def repo(client, message):
-    users = await get("https://api.github.com/repos/jeolpaul/TG-MULTI-BOT/contributors")
-    list_of_users = ""
-    count = 1
-    for user in users:
-        list_of_users += (f"**{count}.** [{user['login']}]({user['html_url']})\n")       
-        count += 1
-    text = f"""[Github](https://github.com/Jeolpaul/TG-MULTI-BOT) | [Updates](t.me/beta_botz)\n```----------------\n| Contributors |\n----------------```\n{list_of_users}"""
-    await client.send_message(chat_id=message.chat.id, text=text, disable_web_page_preview=True)
+
 
     
