@@ -17,7 +17,6 @@ pillow
 opencv-python-headless
 aiofiles
 psutil
-speedtest-cli
 opencv-python-headless                
 bs4
 Pyromod
