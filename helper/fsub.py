@@ -13,14 +13,14 @@ async def ForceSub(bot: Client, event: Message):
         fix_ = await ForceSub(bot, event)
         return fix_
     except Exception as err:
-        print(f"Unable to do Force Subscribe to {FORCE_SUB}\n\nError: {err}\n\nContact Support Group: https://t.me/BETA_SUPPORT")
+        print(f"Unable to do Force Subscribe to {FORCE_SUB}\n\nError: {err}\n\nContact Support Group: https://t.me/tiyaan_bots_chat")
         return 200
     try:
         user = await bot.get_chat_member(chat_id=(int(FORCE_SUB) if FORCE_SUB.startswith("-100") else FORCE_SUB), user_id=event.from_user.id)
         if user.status == "banned":
             await bot.send_message(
                 chat_id=event.from_user.id,
-                text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/BETA_SUPPORT).",
+                text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/tiyaan_bots_chat).",
                 parse_mode="markdown",
                 disable_web_page_preview=True,
                 reply_to_message_id=event.message_id
@@ -45,5 +45,5 @@ async def ForceSub(bot: Client, event: Message):
         fix_ = await ForceSub(bot, event)
         return fix_
     except Exception as err:
-        print(f"Something Went Wrong! Unable to do Force Subscribe.\nError: {err}\n\nContact Support Group: @BETA_SUPPORT")
+        print(f"Something Went Wrong! Unable to do Force Subscribe.\nError: {err}\n\nContact Support Group: https://t.me/tiyaan_bots_chat")
         return 200
