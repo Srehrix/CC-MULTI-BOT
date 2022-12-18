@@ -26,9 +26,9 @@ async def carbon_func(_, message):
     await m.edit("ᴜᴘʟᴏᴀᴅɪɴɢ..")
     await message.reply_photo(
         photo=carbon,
-        caption="**MADE WITH ❤️ BY >JEOL**",
+        caption="**MADE WITH ❤️ BY >ʎuɐdɯoϽɐɯǝuᴉϽ**",
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("JOIN CHANNEL", url="https://t.me/beta_boTZ")                  
+            InlineKeyboardButton("JOIN CHANNEL", url="https://t.me/Tiyaan_bots")                  
             ]]
         )
     )
